@@ -1,0 +1,16 @@
+#about {
+    display: block;
+    width  : 80%;
+    margin : 20px auto;
+}
+
+#about h1 {
+    color : black;
+    margin: 0 auto;
+}
+
+#about p img {
+    display: block;
+    margin : 20px auto 0;
+    height : 100%;
+}

@@ -1,0 +1,38 @@
+#contact {
+    display: block;
+    width  : 80%;
+    margin : 20px auto;
+}
+
+#contact h1 {
+    margin-bottom: 20px;
+}
+
+#contact li {
+    list-style   : none;
+    margin-bottom: 20px;
+}
+
+#contact li p {
+    margin: 0;
+}
+
+#contact a {
+    display        : block;
+    width          : fit-content;
+    text-decoration: none;
+    color          : black;
+}
+
+#contact a::after {
+    content   : '';
+    width     : 0;
+    height    : 2px;
+    background: black;
+    display   : block;
+    transition: all 0.5s ease;
+}
+
+#contact a:hover::after {
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+#product-detail {
+    display              : grid;
+    grid-template-columns: auto auto;
+    gap                  : 20px;
+    width                : 80%;
+    margin               : 10px auto;
+}
+
+/* #product-detail div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align      : center;
+    padding         : 20px 0;
+    font-size       : 30px;
+} */
+
+#product-detail .product-img img {
+    width: 30vw;
+}
+
+#product-detail .product-info {
+    font-size  : 16px;
+    align-items: center;
+}

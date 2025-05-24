@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is a clothing store</title>
+
+    <!-- FONT AWSOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/index.css">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <a href="/" id="logo" class="nav-link" data-path="/">
+            <img class="logo" src="./assets/images/Coca-Cola_logo.svg.png" alt="logo">
+        </a>
+
+        <nav class="navbar">
+            <ul class="nav__links">
+                <li class="dropdown"><a href="/product" class="nav-link" data-path="/product">SẢN PHẨM <i
+                            class="fa-solid fa-chevron-down icon1"></i></a>
+                    <div class="dropdown__menu">
+                        <div class="dropdown__content">
+                            <div class="title" href="#">Nổi bật</div>
+                            <ul>
+                                <li><a href="#">Spring</a></li>
+                                <li><a href="#">Summer</a></li>
+                                <li><a href="#">Fall</a></li>
+                                <li><a href="#">Winter</a></li>
+                                <li><a href="#">XXX</a></li>
+                                <li><a href="#">ABC</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__content">
+                            <div class="title" href="#">Áo</div>
+                            <ul>
+                                <li><a href="#">Áo thun tay ngắn</a></li>
+                                <li><a href="#">Áo thun tay dài</a></li>
+                                <li><a href="#">Áo Sơ mi</a></li>
+                                <li><a href="#">Áo tanktop</a></li>
+                                <li><a href="#">Áo Polo</a></li>
+                                <li><a href="#">Croptop</a></li>
+                                <li><a href="#">Hoodie/ Sweater</a></li>
+                                <li><a href="#">Jacket/ Bomber</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__content">
+                            <div class="title" href="#">Quần</div>
+                            <ul>
+                                <li><a href="#">Quần short</a></li>
+                                <li><a href="#">Quần dài</a></li>
+                                <li><a href="#">Váy nữ</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__content">
+                            <div class="title" href="#">Phụ kiện</div>
+                            <ul>
+                                <li><a href="#">Balo</a></li>
+                                <li><a href="#">Túi tote</a></li>
+                                <li><a href="#">Túi đeo chéo</a></li>
+                                <li><a href="#">Thắt lưng</a></li>
+                                <li><a href="#">Tất</a></li>
+                                <li><a href="#">Mũ</a></li>
+                                <li><a href="#">Giày</a></li>
+                                <li><a href="#">Ví</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">SUMMER</a></li>
+                <li><a href="#">SPRING</a></li>
+                <li><a href="/news" class="nav-link" data-path="/news">TIN TỨC</a></li>
+                <li><a href="/about" class="nav-link" data-path="/about">GIỚI THIỆU</a></li>
+                <li><a href="/contact" class="nav-link" data-path="/contact">LIÊN HỆ</a></li>
+            </ul>
+        </nav>
+
+        <div class="header_right">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon1"></i>
+                <input type="text" placeholder="TÌM KIẾM..." />
+            </div>
+
+            <a class="search-icon2" href="#">
+                Tìm kiếm <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+
+            <a class="cart-icon" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            <a class="user-icon" href="#"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </header>
+
+    <!-- Main  -->
+    <main id="content">
+    </main>
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="footer">
+            <div class="footer__title">
+                <img class="logo" src="./assets/images/Coca-Cola_logo.svg.png" alt="logo">
+                <div class="ft-address">
+                    <a> <i class="fa-solid fa-location-dot"></i> 1111 Mậu Thân, An Hòa, TP. Cần Thơ</a>
+                </div>
+                <div class="ft-phone" href="#">
+
+                    <a href="#"> <i class="fa-solid fa-phone"></i> 085 762 7231 - 035 376 8284</a>
+                </div>
+                <div class="ft-email">
+
+                    <a href="#"> <i class="fa-solid fa-envelope"></i> abc@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer__title">
+                <h3>THÔNG TIN</h3>
+                <ul class="ft-nav">
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Summer</a></li>
+                    <li><a href="#">Spring</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer__title">
+                <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                <ul class="ft-nav">
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Hướng dẫn thanh toán</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Giao hàng và vận chuyển</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                </ul>
+            </div>
+            <div class="footer__title">
+                <h3>THEO DÕI CHÚNG TÔI</h3>
+                <div class="ft-phone" href="#">
+                    <a href="#"> <i class="fa-brands fa-facebook-f"></i> Fakebook</a>
+                </div>
+                <div class="ft-phone" href="#">
+
+                    <a href="#"> <i class="fa-brands fa-instagram"></i> Unstagram</a>
+                </div>
+                <div class="ft-phone" href="#">
+
+                    <a href="#"> <i class="fa-brands fa-youtube"></i> Youtubi</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT  -->
+    <Script src="./views/script.js"></Script>
+</body>
+
+</html>
