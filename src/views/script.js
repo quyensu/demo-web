@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const content = document.getElementById('content');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let prev = document.getElementById('prev');
         let next = document.getElementById('next');
 
-        // --- QUAN TRỌNG: Kiểm tra lại các phần tử có được tìm thấy không ---
+        // IMPORTANT
         if (!list || items.length === 0 || !prev || !next || dots.length === 0) {
             console.warn("Carousel elements NOT found after rendering. Skipping carousel initialization.");
             return;
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Carousel auto-slide interval started.");
     }
 
-    // --- Hàm quản lý CSS động---
+    // Hàm quản lý CSS động
     function addCssFile(href, id) {
         if (currentCssId === id) {
             console.log(`CSS file '${id}' is already current.`);
@@ -154,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ]
 
-    // --- Định nghĩa nội dung các trang---
+    // Định nghĩa nội dung các trang
     const render = {
         '/': /* html */`
             <section class="slide">
@@ -281,8 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h1>${product.name}</h1>
                 <p class="product-price">${product.price}</p>
                 <p class="product-desc">${product.description}</p>
-                <!-- <p>Màu sắc: ${product.colors.join(', ')}</p>
-                <p>Kích thước: ${product.size.join(', ')}</p> -->
                 <div class="add-to-cart">
                     <label for="color-select">Mau sac: </label>
                     <select name="color-select" id="color-select">
@@ -299,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `
     }
 
-    // --- Hàm xử lý sự kiện click cho nav-link ---
+    // Hàm xử lý sự kiện click cho nav-link 
     function navLinkClickHandler(event) {
         event.preventDefault();
         const path = event.currentTarget.getAttribute('data-path');
@@ -309,9 +308,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Hàm hiển thị nội dung và khởi tạo lại các script cần thiết ---
+    // Hàm hiển thị nội dung và khởi tạo lại các script cần thiết 
     function displayContent(path) {
-        removeCurrentCssFile(); // Xóa CSS cũ khi chuyển trang
+        removeCurrentCssFile(); // Xóa CSS cũ
 
         // xuly trang product detail 
         const productDetailMatch = path.match(/^\/product\/(\d+)$/);
@@ -326,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        content.innerHTML = render[path] || render['/']; // Gán nội dung
+        content.innerHTML = render[path] || render['/'];
 
         if (path === '/') {
             addCssFile('./assets/css/carousel.css', 'carousel-css'); // Thêm CSS cho carousel
@@ -336,7 +335,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(refreshSlideInterval);
                 console.log("Cleared carousel interval as not on homepage.");
             }
-            // Thêm CSS và logic riêng cho từng trang nếu cần
             if (path === '/about') {
                 addCssFile('./styles/about.css', 'about-css');
             }
@@ -357,22 +355,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const newlyAddedNavLinks = document.querySelectorAll('.nav-link');
         newlyAddedNavLinks.forEach(link => {
             // Đảm bảo không gắn listener nhiều lần cho cùng một link
-            link.removeEventListener('click', navLinkClickHandler); // Xóa listener cũ (nếu có)
+            link.removeEventListener('click', navLinkClickHandler); // Xóa listener cũ 
             link.addEventListener('click', navLinkClickHandler); // Gắn listener mới
         });
     }
 
-    // --- Xử lý sự kiện điều hướng ban đầu ---
+    // Xử lý sự kiện điều hướng ban đầu 
     navLinks.forEach(link => {
         link.addEventListener('click', navLinkClickHandler);
     });
 
-    // --- Xử lý nút quay lại/tiếp theo của trình duyệt ---
+    // Xu ly nut prev/next cua browser
     window.addEventListener('popstate', () => {
         displayContent(location.pathname);
     });
 
-    // --- Lần tải trang đầu tiên ---
+    // Lần tải trang đầu tiên 
     // Gọi displayContent để hiển thị nội dung ban đầu dựa trên URL hiện tại
     displayContent(location.pathname);
     attachNavLinkListeners(); //gan Listeners cho cac link ban dau trong header
